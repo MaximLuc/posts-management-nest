@@ -1,15 +1,33 @@
 # Posts Management System
 
-NestJS backend with in-memory storage for managing posts.
+Backend-приложение на NestJS для управления постами с in-memory хранилищем.
 
-## Run
+## Локальный запуск
 
 ```bash
 npm install
 npm run start
 ```
 
-Server starts on `http://localhost:3000`.
+Сервер будет доступен по адресу `http://localhost:3000`.
+
+## Запуск через Docker
+
+Сборка и запуск контейнера локально:
+
+```bash
+docker build -t posts-management-nest .
+docker run -p 3000:3000 posts-management-nest
+```
+
+## Запуск из GitHub Container Registry
+
+Команды для скачивания и запуска:
+
+```bash
+docker pull ghcr.io/MaximLuc/posts-management-nest:latest
+docker run -p 3000:3000 ghcr.io/maximluc/posts-management-nest:latest
+```
 
 ## Endpoints
 
@@ -19,6 +37,6 @@ Server starts on `http://localhost:3000`.
 - `PATCH /posts/:id`
 - `DELETE /posts/:id`
 
-## Pagination
+## Пагинация
 
 `GET /posts?page=1&limit=5`
