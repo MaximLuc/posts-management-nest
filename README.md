@@ -25,7 +25,7 @@ docker run -p 3000:3000 posts-management-nest
 Команды для скачивания и запуска:
 
 ```bash
-docker pull ghcr.io/MaximLuc/posts-management-nest:latest
+docker pull ghcr.io/maximluc/posts-management-nest:latest
 docker run -p 3000:3000 ghcr.io/maximluc/posts-management-nest:latest
 ```
 
